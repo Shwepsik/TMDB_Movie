@@ -141,6 +141,6 @@ extension CarouselItemViewModel {
     init(show: Show) {
         self.title = show.name
         self.subtitle = show.releaseDate
-        self.imageUrl = "http://image.tmdb.org/t/p/w185/" + show.posterUrl
+        self.imageUrl = show.posterUrl.flatMap { "http://image.tmdb.org/t/p/w780/" + $0 }
     }
 }

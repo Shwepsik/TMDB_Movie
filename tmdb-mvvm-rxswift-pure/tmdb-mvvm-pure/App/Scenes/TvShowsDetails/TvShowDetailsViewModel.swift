@@ -57,14 +57,14 @@ final class TvShowDetailsViewModel: ViewModelType {
 
 struct TvShowDetailsData {
     let name: String
-    let posterUrl: String
+    let posterUrl: String?
     let releaseDate: String
 }
 
 extension TvShowDetailsData {
     init(show: Show) {
         self.name = show.name
-        self.posterUrl = "http://image.tmdb.org/t/p/w780/" + show.posterUrl
+        self.posterUrl = show.posterUrl.flatMap { "http://image.tmdb.org/t/p/w780/" + $0 }
         self.releaseDate = show.releaseDate
     }
 }

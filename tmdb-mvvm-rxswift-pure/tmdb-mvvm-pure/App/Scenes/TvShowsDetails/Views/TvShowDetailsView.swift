@@ -39,7 +39,9 @@ extension TvShowDetailsView {
     func configure(with data: TvShowDetailsData) {
         showNameLabel.text = data.name
         releaseDateLabel.text = data.releaseDate
-        Nuke.loadImage(with: URL(string: data.posterUrl)!, into: posterImageView)
+        if let url = data.posterUrl {
+            Nuke.loadImage(with: URL(string: url)!, into: posterImageView)
+        }
     }
 }
 
