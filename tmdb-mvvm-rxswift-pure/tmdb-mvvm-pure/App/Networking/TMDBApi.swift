@@ -13,6 +13,7 @@ protocol TMDBApiMoviesProvider {
     func fetchPopularMovies() -> Observable<[Movie]?>
     func fetchMovieDetails(forMovieId id: Int) -> Observable<Movie?>
     func searchMovies(forQuery query: String) -> Observable<[Movie]?>
+    func fetchShowDetails(forShowId id: Int) -> Single<Show?>
 }
 
 protocol TMDBApiPeopleProvider {
@@ -106,6 +107,17 @@ final class TMDBApi: TMDBApiProvider {
                 }
                 return response.results
         }
+    }
+    
+    func fetchShowDetails(forShowId id: Int) -> Single<Show?> {
+        return httpClient.get(url: "https://api.themoviedb.org/3/tv/\(id)?api_key=\(Constants.apiKey)&language=en-US)")
+            .map { data -> Show? in
+                guard let data = data,
+                      let response = try? JSONDecoder().decode(Show.self, from: data) else {
+                          return nil
+                      }
+                return response
+            }.asSingle()
     }
     
     func login(withUsername username: String, password: String) -> Observable<Bool> {

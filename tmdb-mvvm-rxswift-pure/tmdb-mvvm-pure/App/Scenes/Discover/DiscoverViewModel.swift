@@ -62,7 +62,7 @@ final class DiscoverViewModel: ViewModelType {
             .do(onNext: { [weak self] (index: (Int, Int), res: ([Movie]?, [Person]?, [Show]?)) in
                 guard let strongSelf = self else { return }
                 let (carouselIndex, itemIndex) = index
-                let (movies, peoples, _) = res
+                let (movies, peoples, shows) = res
 
                 switch carouselIndex {
                 case 0:
@@ -73,7 +73,9 @@ final class DiscoverViewModel: ViewModelType {
                     guard let name = peoples?[itemIndex].name else { return }
                     guard let profileUrl = peoples?[itemIndex].profileUrl else { return }
                     strongSelf.dependencies.navigator.navigateToPeopleDetailsScreen(name: name, profileUrl: profileUrl)
-                case 2: strongSelf.dependencies.navigator.navigateToShowDetailScreen()
+                case 2:
+                    guard let id = shows?[itemIndex].id else { return }
+                    strongSelf.dependencies.navigator.navigateToShowDetailScreen(withShowId: id, api: strongSelf.dependencies.api)
                 default: return
                 }
             })

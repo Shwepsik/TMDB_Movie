@@ -49,4 +49,11 @@ extension UIStoryboard {
         }
         return vc
     }
+    
+    var showDetailsViewController: TvShowDetailsViewController {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "TvShowDetailsViewController") as? TvShowDetailsViewController else {
+            fatalError("TvShowDetailsViewController couldn't be found in Storyboard file")
+        }
+        return vc
+    }
 }

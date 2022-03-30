@@ -13,6 +13,11 @@
 		3853AF4127EE770600D7CD1C /* PeopleDetailsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF4027EE770600D7CD1C /* PeopleDetailsNavigator.swift */; };
 		3853AF4427EE77BE00D7CD1C /* PeopleDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */; };
 		3853AF4627F2611100D7CD1C /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */; };
+		3885141027F3A48100A7A3EE /* TvShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885140F27F3A48100A7A3EE /* TvShowDetailsViewModel.swift */; };
+		3885141227F3A49F00A7A3EE /* TvShowDetailsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885141127F3A49F00A7A3EE /* TvShowDetailsNavigator.swift */; };
+		3885141427F3B71A00A7A3EE /* TvShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885141327F3B71A00A7A3EE /* TvShowDetailsViewController.swift */; };
+		3885141727F3B89C00A7A3EE /* TvShowDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885141627F3B89C00A7A3EE /* TvShowDetailsView.swift */; };
+		3885141927F3B8A500A7A3EE /* TvShowDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885141827F3B8A500A7A3EE /* TvShowDetailsView.xib */; };
 		6F6C678413B31BCACD1F8878 /* Pods_tmdb_mvvm_pureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4DB2025D7B2B2A18A2BEDD /* Pods_tmdb_mvvm_pureTests.framework */; };
 		72AD9347803E386462C24FCA /* Pods_tmdb_mvvm_pure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A5DE6D937D06E89D25FB0D /* Pods_tmdb_mvvm_pure.framework */; };
 		D202E3A421FE58C300027462 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E3A321FE58C300027462 /* ActivityIndicator.swift */; };
@@ -77,6 +82,11 @@
 		3853AF4027EE770600D7CD1C /* PeopleDetailsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsNavigator.swift; sourceTree = "<group>"; };
 		3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleDetailsView.xib; sourceTree = "<group>"; };
 		3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
+		3885140F27F3A48100A7A3EE /* TvShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailsViewModel.swift; sourceTree = "<group>"; };
+		3885141127F3A49F00A7A3EE /* TvShowDetailsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailsNavigator.swift; sourceTree = "<group>"; };
+		3885141327F3B71A00A7A3EE /* TvShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailsViewController.swift; sourceTree = "<group>"; };
+		3885141627F3B89C00A7A3EE /* TvShowDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailsView.swift; sourceTree = "<group>"; };
+		3885141827F3B8A500A7A3EE /* TvShowDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TvShowDetailsView.xib; sourceTree = "<group>"; };
 		39A5DE6D937D06E89D25FB0D /* Pods_tmdb_mvvm_pure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb_mvvm_pure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4DB2025D7B2B2A18A2BEDD /* Pods_tmdb_mvvm_pureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb_mvvm_pureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7324DB239DB439D92577D7D /* Pods-tmdb-mvvm-pureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmdb-mvvm-pureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tmdb-mvvm-pureTests/Pods-tmdb-mvvm-pureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +184,26 @@
 			children = (
 				3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */,
 				3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3885140E27F3A45B00A7A3EE /* TvShowsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3885141527F3B88A00A7A3EE /* Views */,
+				3885140F27F3A48100A7A3EE /* TvShowDetailsViewModel.swift */,
+				3885141327F3B71A00A7A3EE /* TvShowDetailsViewController.swift */,
+				3885141127F3A49F00A7A3EE /* TvShowDetailsNavigator.swift */,
+			);
+			path = TvShowsDetails;
+			sourceTree = "<group>";
+		};
+		3885141527F3B88A00A7A3EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3885141627F3B89C00A7A3EE /* TvShowDetailsView.swift */,
+				3885141827F3B8A500A7A3EE /* TvShowDetailsView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +380,7 @@
 		D27F826421FE49BB0071513F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3885140E27F3A45B00A7A3EE /* TvShowsDetails */,
 				3853AF3B27EE76B300D7CD1C /* PeopleDetails */,
 				D27F826521FE49C20071513F /* Login */,
 				D202E3A921FE7B3600027462 /* Discover */,
@@ -477,6 +508,7 @@
 				D202E3BE21FF5A2700027462 /* MovieCell.xib in Resources */,
 				D27F824E21FE493D0071513F /* LaunchScreen.storyboard in Resources */,
 				D27F824B21FE493D0071513F /* Assets.xcassets in Resources */,
+				3885141927F3B8A500A7A3EE /* TvShowDetailsView.xib in Resources */,
 				D27F824921FE493C0071513F /* Main.storyboard in Resources */,
 				D202E3B221FE7EA700027462 /* CarouselSectionCell.xib in Resources */,
 				D202E3CA21FFC69100027462 /* MovieDetailHeaderView.xib in Resources */,
@@ -569,6 +601,7 @@
 				D202E3D82200628E00027462 /* UIViewController+Rx.swift in Sources */,
 				D24468C42201C52800355E9C /* App.swift in Sources */,
 				3853AF4627F2611100D7CD1C /* PeopleDetailsView.swift in Sources */,
+				3885141027F3A48100A7A3EE /* TvShowDetailsViewModel.swift in Sources */,
 				D202E3C321FFBB7F00027462 /* MovieDetailViewModel.swift in Sources */,
 				D24468BA2201C11A00355E9C /* Show.swift in Sources */,
 				D27F826E21FE4B440071513F /* TMDBApi.swift in Sources */,
@@ -586,11 +619,14 @@
 				D202E3AD21FE7BEE00027462 /* DiscoverViewModel.swift in Sources */,
 				D27F826B21FE4A160071513F /* ViewModelType.swift in Sources */,
 				D202E3AF21FE7BF700027462 /* DiscoverNavigator.swift in Sources */,
+				3885141727F3B89C00A7A3EE /* TvShowDetailsView.swift in Sources */,
 				D24468C22201C30700355E9C /* HTTPClient.swift in Sources */,
 				3853AF4127EE770600D7CD1C /* PeopleDetailsNavigator.swift in Sources */,
 				D202E3B621FEF3E900027462 /* CarouselSectionCell.swift in Sources */,
+				3885141227F3A49F00A7A3EE /* TvShowDetailsNavigator.swift in Sources */,
 				3853AF3A27EE6FEF00D7CD1C /* Session.swift in Sources */,
 				D27F824421FE493C0071513F /* AppDelegate.swift in Sources */,
+				3885141427F3B71A00A7A3EE /* TvShowDetailsViewController.swift in Sources */,
 				3853AF3F27EE76F900D7CD1C /* PeopleDetailsViewController.swift in Sources */,
 				D24468C62201C82A00355E9C /* GradientImageView.swift in Sources */,
 				D24468BE2201C14500355E9C /* Genre.swift in Sources */,
