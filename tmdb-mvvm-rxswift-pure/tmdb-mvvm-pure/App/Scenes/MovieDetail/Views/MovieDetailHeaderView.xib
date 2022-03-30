@@ -83,9 +83,9 @@
                         <constraint firstAttribute="height" constant="3" id="z2d-53-nvO"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-QL-JK0" userLabel="Overview">
-                    <rect key="frame" x="20" y="195" width="335" height="67"/>
-                    <string key="text">Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world.</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWp-QL-JK0" userLabel="Overview">
+                    <rect key="frame" x="20" y="195" width="335" height="117"/>
+                    <string key="text">Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world. Arthur Curry learns that he is the heir to the underwater kingdom of Atlantis, and must step forward to lead his people and be a hero to the world.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@
                 <constraint firstItem="q2A-Cm-Ogk" firstAttribute="leading" secondItem="VXd-aV-7eB" secondAttribute="trailing" constant="9.5" id="WZW-vH-Dti"/>
                 <constraint firstItem="VXd-aV-7eB" firstAttribute="leading" secondItem="yHw-vq-V8g" secondAttribute="trailing" constant="12" id="ZBH-Be-9U4"/>
                 <constraint firstItem="G23-bi-cQp" firstAttribute="top" secondItem="hjx-ix-74u" secondAttribute="bottom" constant="40" id="cE5-u4-xTD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kWp-QL-JK0" secondAttribute="bottom" constant="40" id="eGv-6Q-Est"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kWp-QL-JK0" secondAttribute="bottom" constant="10" id="eGv-6Q-Est"/>
                 <constraint firstItem="q2A-Cm-Ogk" firstAttribute="centerY" secondItem="G23-bi-cQp" secondAttribute="centerY" id="eTw-28-lXT"/>
                 <constraint firstItem="hjx-ix-74u" firstAttribute="top" secondItem="Uvb-LJ-4Bv" secondAttribute="bottom" id="er2-DH-Apf"/>
                 <constraint firstItem="hjx-ix-74u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jro-dr-IZ5"/>

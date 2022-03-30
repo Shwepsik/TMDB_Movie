@@ -42,4 +42,11 @@ extension UIStoryboard {
         }
         return vc
     }
+    
+    var peopleDetailsViewController: PeopleDetailsViewController {
+        guard let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "PeopleDetailsViewController") as? PeopleDetailsViewController else {
+            fatalError("PeopleDetailsViewController couldn't be found in Storyboard file")
+        }
+        return vc
+    }
 }

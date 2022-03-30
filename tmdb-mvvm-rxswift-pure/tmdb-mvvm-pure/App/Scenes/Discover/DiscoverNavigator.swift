@@ -10,7 +10,7 @@ import UIKit
 
 protocol DiscoverNavigatable {
     func navigateToMovieDetailScreen(withMovieId id: Int, api: TMDBApiProvider)
-    func navigateToPersonDetailScreen()
+    func navigateToPeopleDetailsScreen(name: String, profileUrl: String)
     func navigateToShowDetailScreen()
 }
 
@@ -28,12 +28,19 @@ final class DiscoverNavigator: DiscoverNavigatable {
                                                                                                         navigator: movieDetailNavigator))
         let movieDetailViewController = UIStoryboard.main.movieDetailViewController
         movieDetailViewController.viewModel = movieDetailViewModel
-        
+        movieDetailViewController.hidesBottomBarWhenPushed = true
+
         navigationController.show(movieDetailViewController, sender: nil)
     }
     
-    func navigateToPersonDetailScreen() {
+    func navigateToPeopleDetailsScreen(name: String, profileUrl: String) {
+        let peopleDetailsNavigator = PeopleDetailsNavigator(navigationController: navigationController)
+        let peopleDetailsViewModel = PeopleDetailsViewModel(dependencies: PeopleDetailsViewModel.Dependencies(name: name, prifileUrl: profileUrl, navigator: peopleDetailsNavigator))
+        let peopleDetailsViewController = UIStoryboard.main.peopleDetailsViewController
+        peopleDetailsViewController.viewModel = peopleDetailsViewModel
+        peopleDetailsViewController.hidesBottomBarWhenPushed = true
         
+        navigationController.show(peopleDetailsViewController, sender: nil)
     }
     
     func navigateToShowDetailScreen() {

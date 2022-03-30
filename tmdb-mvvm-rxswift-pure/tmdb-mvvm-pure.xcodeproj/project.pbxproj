@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3853AF3A27EE6FEF00D7CD1C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF3927EE6FEF00D7CD1C /* Session.swift */; };
+		3853AF3D27EE76F000D7CD1C /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF3C27EE76F000D7CD1C /* PeopleDetailsViewModel.swift */; };
+		3853AF3F27EE76F900D7CD1C /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF3E27EE76F900D7CD1C /* PeopleDetailsViewController.swift */; };
+		3853AF4127EE770600D7CD1C /* PeopleDetailsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF4027EE770600D7CD1C /* PeopleDetailsNavigator.swift */; };
+		3853AF4427EE77BE00D7CD1C /* PeopleDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */; };
+		3853AF4627F2611100D7CD1C /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */; };
 		6F6C678413B31BCACD1F8878 /* Pods_tmdb_mvvm_pureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4DB2025D7B2B2A18A2BEDD /* Pods_tmdb_mvvm_pureTests.framework */; };
 		72AD9347803E386462C24FCA /* Pods_tmdb_mvvm_pure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A5DE6D937D06E89D25FB0D /* Pods_tmdb_mvvm_pure.framework */; };
 		D202E3A421FE58C300027462 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E3A321FE58C300027462 /* ActivityIndicator.swift */; };
@@ -67,6 +72,11 @@
 /* Begin PBXFileReference section */
 		049324FB5628212F25B3D1CA /* Pods-tmdb-mvvm-pureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmdb-mvvm-pureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tmdb-mvvm-pureTests/Pods-tmdb-mvvm-pureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3853AF3927EE6FEF00D7CD1C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		3853AF3C27EE76F000D7CD1C /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
+		3853AF3E27EE76F900D7CD1C /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		3853AF4027EE770600D7CD1C /* PeopleDetailsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsNavigator.swift; sourceTree = "<group>"; };
+		3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleDetailsView.xib; sourceTree = "<group>"; };
+		3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
 		39A5DE6D937D06E89D25FB0D /* Pods_tmdb_mvvm_pure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb_mvvm_pure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4DB2025D7B2B2A18A2BEDD /* Pods_tmdb_mvvm_pureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb_mvvm_pureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7324DB239DB439D92577D7D /* Pods-tmdb-mvvm-pureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmdb-mvvm-pureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tmdb-mvvm-pureTests/Pods-tmdb-mvvm-pureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +156,26 @@
 				3853AF3927EE6FEF00D7CD1C /* Session.swift */,
 			);
 			path = UserSession;
+			sourceTree = "<group>";
+		};
+		3853AF3B27EE76B300D7CD1C /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3853AF4227EE774A00D7CD1C /* Views */,
+				3853AF3E27EE76F900D7CD1C /* PeopleDetailsViewController.swift */,
+				3853AF3C27EE76F000D7CD1C /* PeopleDetailsViewModel.swift */,
+				3853AF4027EE770600D7CD1C /* PeopleDetailsNavigator.swift */,
+			);
+			path = PeopleDetails;
+			sourceTree = "<group>";
+		};
+		3853AF4227EE774A00D7CD1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3853AF4327EE77BE00D7CD1C /* PeopleDetailsView.xib */,
+				3853AF4527F2611100D7CD1C /* PeopleDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B35FC69B0CEA0749EA6F39F8 /* Frameworks */ = {
@@ -320,6 +350,7 @@
 		D27F826421FE49BB0071513F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3853AF3B27EE76B300D7CD1C /* PeopleDetails */,
 				D27F826521FE49C20071513F /* Login */,
 				D202E3A921FE7B3600027462 /* Discover */,
 				D202E3BF21FFBB6100027462 /* MovieDetail */,
@@ -449,6 +480,7 @@
 				D27F824921FE493C0071513F /* Main.storyboard in Resources */,
 				D202E3B221FE7EA700027462 /* CarouselSectionCell.xib in Resources */,
 				D202E3CA21FFC69100027462 /* MovieDetailHeaderView.xib in Resources */,
+				3853AF4427EE77BE00D7CD1C /* PeopleDetailsView.xib in Resources */,
 				D24468B32201AC5B00355E9C /* SearchCell.xib in Resources */,
 				D202E3CE2200599F00027462 /* MovieDetailTipsView.xib in Resources */,
 				D202E3BC21FF27CF00027462 /* DiscoverMainView.xib in Resources */,
@@ -527,6 +559,7 @@
 			files = (
 				D202E3CC2200597A00027462 /* MovieDetailTipsView.swift in Sources */,
 				D24468B12201AC4C00355E9C /* SearchCell.swift in Sources */,
+				3853AF3D27EE76F000D7CD1C /* PeopleDetailsViewModel.swift in Sources */,
 				D202E3B821FF269E00027462 /* MovieCell.swift in Sources */,
 				D202E3C121FFBB7000027462 /* MovieDetailViewController.swift in Sources */,
 				D24468B82201C11500355E9C /* Movie.swift in Sources */,
@@ -535,6 +568,7 @@
 				D27F826921FE49D60071513F /* LoginViewModel.swift in Sources */,
 				D202E3D82200628E00027462 /* UIViewController+Rx.swift in Sources */,
 				D24468C42201C52800355E9C /* App.swift in Sources */,
+				3853AF4627F2611100D7CD1C /* PeopleDetailsView.swift in Sources */,
 				D202E3C321FFBB7F00027462 /* MovieDetailViewModel.swift in Sources */,
 				D24468BA2201C11A00355E9C /* Show.swift in Sources */,
 				D27F826E21FE4B440071513F /* TMDBApi.swift in Sources */,
@@ -553,9 +587,11 @@
 				D27F826B21FE4A160071513F /* ViewModelType.swift in Sources */,
 				D202E3AF21FE7BF700027462 /* DiscoverNavigator.swift in Sources */,
 				D24468C22201C30700355E9C /* HTTPClient.swift in Sources */,
+				3853AF4127EE770600D7CD1C /* PeopleDetailsNavigator.swift in Sources */,
 				D202E3B621FEF3E900027462 /* CarouselSectionCell.swift in Sources */,
 				3853AF3A27EE6FEF00D7CD1C /* Session.swift in Sources */,
 				D27F824421FE493C0071513F /* AppDelegate.swift in Sources */,
+				3853AF3F27EE76F900D7CD1C /* PeopleDetailsViewController.swift in Sources */,
 				D24468C62201C82A00355E9C /* GradientImageView.swift in Sources */,
 				D24468BE2201C14500355E9C /* Genre.swift in Sources */,
 			);
