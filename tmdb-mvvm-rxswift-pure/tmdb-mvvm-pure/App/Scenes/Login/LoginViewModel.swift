@@ -30,6 +30,7 @@ final class LoginViewModel: ViewModelType {
     struct Dependencies {
         let api: TMDBApiProvider
         let navigator: LoginNavigator
+        let session: SessionStorage
     }
     
     private let dependencies: Dependencies
@@ -63,6 +64,7 @@ final class LoginViewModel: ViewModelType {
             .do(onNext: { [weak self] loginResult in
                 guard loginResult == LoginResult.success,
                     let strongSelf = self else { return }
+                strongSelf.dependencies.session.isAuthorized = true
                 strongSelf.dependencies.navigator.toMain()
             })
         

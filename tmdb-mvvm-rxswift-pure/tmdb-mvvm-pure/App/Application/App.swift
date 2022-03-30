@@ -12,6 +12,42 @@ final class App {
     static let shared = App()
     
     func startInterface(in window: UIWindow) {
+        window.rootViewController = rootViewController(for: Session())
+        window.makeKeyAndVisible()
+    }
+    
+    func updateWindowRootViewController(for session: SessionStorage) {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let controller = rootViewController(for: session)
+        window.rootViewController = controller
+        UIView.transition(
+            with: window,
+            duration: 0.6,
+            options: .transitionCrossDissolve,
+            animations: nil
+        )
+    }
+}
+
+// MARK: - Private
+
+private extension App {
+    
+    func rootViewController(for session: SessionStorage) -> UIViewController {
+        session.isAuthorized ? tabBarController() : authorizationController()
+    }
+    
+    func authorizationController() -> UIViewController {
+        let loginNavigationController = UINavigationController()
+        let loginNavigator = LoginNavigator(navigationController: loginNavigationController)
+        let loginViewModel = LoginViewModel(dependencies: LoginViewModel.Dependencies(api: TMDBApi(), navigator: loginNavigator, session: Session()))
+        let loginViewController = UIStoryboard.main.loginViewController
+        loginViewController.viewModel = loginViewModel
+        loginNavigationController.viewControllers = [loginViewController]
+        return loginViewController
+    }
+    
+    func tabBarController() -> UIViewController {
         let discoverNavigationController = UINavigationController()
         let discoverNavigator = DiscoverNavigator(navigationController: discoverNavigationController)
         let discoverViewModel = DiscoverViewModel(dependencies: DiscoverViewModel.Dependencies(api: TMDBApi(), navigator: discoverNavigator))
@@ -39,18 +75,6 @@ final class App {
             searchNavigationController
         ]
         
-        let loginNavigationController = UINavigationController()
-        let loginNavigator = LoginNavigator(navigationController: loginNavigationController)
-        let loginViewModel = LoginViewModel(dependencies: LoginViewModel.Dependencies(api: TMDBApi(), navigator: loginNavigator))
-        let loginViewController = UIStoryboard.main.loginViewController
-        loginViewController.viewModel = loginViewModel
-        loginNavigationController.viewControllers = [loginViewController]
-        
-        window.rootViewController = tabBarController
-        window.makeKeyAndVisible()
-        
-        // Not the nicest solution, if someone has any idea how to manage login/main screens, please let me know!
-        tabBarController.present(loginNavigationController, animated: true, completion: nil)
-
+        return tabBarController
     }
 }
